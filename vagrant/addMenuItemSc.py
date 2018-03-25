@@ -4,7 +4,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 	# import from the dabase_setup file created by Mehrshad
-from databese_setup import Base, Restaurant, MenuItem, Employee, Address
+from database_setup import Base, Restaurant, MenuItem, Employee, Address
 	# The name of the database file is specified in the
 	# database_setup file
 engine = create_engine('sqlite:///restaurantmenu.db')
@@ -40,3 +40,7 @@ rebeccaAddress = Address(street = "512 Sycamore Road",zip = "02001", employee = 
 session.add(rebeccaAddress)
 session.commit()
 session.query(Address).all()	
+session.query(Restaurant).all()
+items = session.query(MenuItems).all()
+for item in items
+	print item.name
